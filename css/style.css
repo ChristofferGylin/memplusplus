@@ -1,0 +1,70 @@
+html {
+    font-size: 62.5%;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(192, 192, 203);
+    box-shadow: 0.5rem 0.5rem 0.5rem black;
+    width: 80vw;
+    height: 70vh;
+    max-width: 660px;
+}
+
+.card {
+    background-color: rgb(156, 164, 176);
+    background-image: url('../img/QuestionMark.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid black;
+    border-radius: 0.2rem;
+    box-shadow: 0.2rem 0.2rem 0.5rem black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    width: 80%;
+    height: 80%;
+
+}
+
+.card img {
+    width: 80%;
+    visibility: hidden;
+}
+
+.card-show {
+    background-image: none;
+}
+
+.card-show img {
+    visibility: visible;
+}
+
+button {
+    color: rgb(33, 32, 32);
+    font-size: 2rem;
+    background-color: aliceblue;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+}
+
+button:hover {
+    color: aliceblue;
+    background-color: rgb(33, 32, 32);
+}
