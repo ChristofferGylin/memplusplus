@@ -6,6 +6,7 @@ export const game = {
     pairGoal: 0,
     pickedCard: null,
     pickedCardElements: [],
+    pairedCards: [],
     pics: null,
     background: null,
     score: 0,

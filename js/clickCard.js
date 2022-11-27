@@ -8,6 +8,10 @@ export const clickCard = (e) => {
         return;
     }
 
+    if (e.target.className === 'card-flipped') {
+        return;
+    }
+
     if (game.pickedCardElements.length === 0) {
 
         game.pickedCardElements.push(e.target);
@@ -28,6 +32,8 @@ export const clickCard = (e) => {
             showCard(e);
 
             if (e.target.dataset.number === game.pickedCardElements[0].dataset.number) {
+                game.pairedCards.push(e.target);
+                game.pairedCards.push(game.pickedCardElements[0]);
                 game.score += 100;
                 game.numberOfPairs++;
                 document.getElementById('score');
