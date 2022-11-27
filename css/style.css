@@ -22,6 +22,16 @@ main {
     align-items: center;
 }
 
+#blackoutcover {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    background-color: black;
+    opacity: 0;
+    display: none;
+    transition: all 1s;
+}
+
 #preloadPics {
     display: none;
 }
@@ -125,7 +135,7 @@ main {
 
 .card-flipped {
     background-color: #f0ead6;
-    background-size: 80%;
+    background-size: 90%;
     background-repeat: no-repeat;
     background-position: center;
     border: 1px solid black;

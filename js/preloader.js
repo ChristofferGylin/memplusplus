@@ -6,6 +6,9 @@ export const preloader = (game) => {
 
     const newBackground = document.createElement('img');
     newBackground.src = game.background;
+    newBackground.onload = () => {
+        confirmations.push(true);
+    };
 
     game.pics.forEach(pic => {
 
@@ -22,7 +25,8 @@ export const preloader = (game) => {
 
     const arePicsLoaded = () => {
         if (confirmations.length === game.pics.length + 1) {
-            console.log('All pics loaded');
+
+            game.gameOn = true;
         } else {
 
             setTimeout(() => {
