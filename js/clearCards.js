@@ -5,6 +5,7 @@ export const clearCards = () => {
 
     game.pickedCardElements.forEach(element => {
         element.removeAttribute('style');
+        element.className = 'card';
     });
 
     game.pickedCardElements.length = 0;

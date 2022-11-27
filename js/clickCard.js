@@ -11,6 +11,7 @@ export const clickCard = (e) => {
     if (game.pickedCardElements.length === 0) {
 
         game.pickedCardElements.push(e.target);
+        e.target.className = 'card-flipped';
         showCard(e);
         return;
 
@@ -23,12 +24,15 @@ export const clickCard = (e) => {
         } else {
 
             game.pickedCardElements.push(e.target);
+            e.target.className = 'card-flipped';
             showCard(e);
 
             if (e.target.dataset.number === game.pickedCardElements[0].dataset.number) {
-                game.score++;
+                game.score += 100;
+                game.numberOfPairs++;
+                document.getElementById('score');
                 score.innerHTML = `Score: ${game.score}`;
-                if (game.score >= game.scoreGoal) {
+                if (game.numberOfPairs >= game.pairGoal) {
                     game.gameOn = false;
                     console.log('You win!', game);
                 }
@@ -46,6 +50,7 @@ export const clickCard = (e) => {
     } else {
         clearCards();
         game.pickedCardElements.push(e.target);
+        e.target.className = 'card-flipped';
         showCard(e);
 
     }

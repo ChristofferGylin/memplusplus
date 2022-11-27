@@ -4,16 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <style>
+        .testImg {
+            width: 200px;
+        }
+    </style>
     <title>Memory</title>
 </head>
 <body>
     <div id="container">
-        <h1 id="timer">Time Left: 30 Sec</h1>
-        <h2 id="score">Score: </h2>
-        <div id="gameBoard"></div>
-        <button>Start</button>
+        <main>
+            <div id="gameBoard"></div>
+        </main>
+        <div id="sidebar">
+            <div id="timerContainer"></div>
+            <div id="scoreContainer"><p id="score"></p></div>
+        </div>      
     </div>
+    <div id="preloadPics"></div>
     
     <script type="module" src="./js/index.js"></script>
 </body>

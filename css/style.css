@@ -1,45 +1,139 @@
 html {
     font-size: 62.5%;
+    margin: 0;
+    padding: 0;
 }
 
-#container {
+body {
+    margin: 0;
+    padding: 0;
+
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+}
+
+main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
+}
+
+#preloadPics {
+    display: none;
+}
+
+#sidebar {
+    background-color: rgba(192, 192, 203, 0.7);
+    border-left: 0.1rem solid rgb(34, 33, 33);
+    display: grid;
+    grid-template-rows: auto 20%;
+
+}
+
+#container {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    height: 100%;
+    overflow: auto;
+
 }
 
 #gameBoard {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
-    background-color: rgb(192, 192, 203);
+    background-color: rgba(192, 192, 203, 0.7);
     box-shadow: 0.5rem 0.5rem 0.5rem black;
-    width: 80vw;
-    height: 70vh;
-    max-width: 660px;
+    border-radius: 2%;
+
+}
+
+.game-board-level1 {
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 26.67vw;
+    height: 27.82vw;
+
+
+}
+
+.game-board-level2 {
+
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    width: 33.33vw;
+    height: 37.1vw;
+
+
+}
+
+.game-board-level3 {
+
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    width: 40vw;
+    height: 46.36vw;
+
+
+}
+
+#timerContainer {
+    width: 90%;
+    height: auto;
+    margin: 1rem auto;
+
+
+
+}
+
+#timerSvg {
+    width: 100%;
+}
+
+#timerLightRing {
+    transform-origin: center;
+    transform: rotate(-90deg);
+}
+
+#timerDigits {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.test {
+    background-color: eggshell;
 }
 
 .card {
-    background-color: rgb(156, 164, 176);
-    background-image: url('../img/QuestionMark.png');
-    background-size: contain;
+    background-color: #f0ead6;
+    background-image: url('../img/memorycard-red.svg');
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     border: 1px solid black;
-    border-radius: 0.2rem;
+    border-radius: 5%;
     box-shadow: 0.2rem 0.2rem 0.5rem black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     justify-self: center;
     width: 80%;
     height: 80%;
 
+}
+
+.card-flipped {
+    background-color: #f0ead6;
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid black;
+    border-radius: 5%;
+    box-shadow: 0.2rem 0.2rem 0.5rem black;
+    justify-self: center;
+    width: 80%;
+    height: 80%;
 }
 
 .card img {
