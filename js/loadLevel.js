@@ -4,7 +4,9 @@ import { game } from "./game.js";
 import { preloader } from './preloader.js';
 
 export const loadLevel = (level) => {
+    const timeLimits = [90000, 60000, 30000]
 
+    game.timeLimit = timeLimits[game.stressLevel];
     game.pics = createPicSelection(level);
     game.background = level.backgroundImg;
     preloader(game);

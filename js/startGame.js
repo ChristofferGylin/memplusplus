@@ -5,12 +5,9 @@ import { startTimer } from './timer/startTimer.js';
 import { updateTimer } from './timer/updateTimer.js';
 
 export const startGame = (game) => {
-    console.log('startGame');
-    document.getElementById('blackoutcover').style.display = 'block';
-    document.getElementById('blackoutcover').style.opacity = '100%';
 
     const continueStart = () => {
-        console.log('continueStart');
+
         drawTimer();
 
         document.getElementById('blackoutcover').style.opacity = '0%';
@@ -25,7 +22,6 @@ export const startGame = (game) => {
     }
 
     const checkIfLoaded = () => {
-        console.log('checkIfLoaded');
 
         if (game.gameOn) {
             continueStart();
@@ -37,11 +33,19 @@ export const startGame = (game) => {
 
     }
 
+    document.getElementById('blackoutcover').style.display = 'block';
+    document.getElementById('blackoutcover').style.opacity = '100%';
+
     setTimeout(() => {
+        document.getElementById('container').style.gridTemplateColumns = "4fr 1fr";
+        document.getElementById('sidebar').style.display = 'grid';
+        document.getElementById('gameBoard').innerHTML = '';
         loadLevel(levels[game.level]);
         checkIfLoaded();
 
 
     }, 1000);
+
+
 
 }

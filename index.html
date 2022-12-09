@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <style>
         .testImg {
@@ -20,11 +19,36 @@
     <div id="blackoutcover"></div>
     <div id="container">
         <main>
-            <div id="gameBoard"></div>
+            <div id="gameBoard" class="game-board-menu">
+                <div class="logo"><h1>Mem++</h1></div>
+                <div class="stress-level">
+                    <h2>Stress Level:</h2>
+                    <div id="stressLevel0" data-stress-level="0" class="stress-level-button"><h3>Day at the beach</h3></div>
+                    <div id="stressLevel1" data-stress-level="1" class="stress-level-button stress-level-chosen"><h3>Day at the office</h3></div>
+                    <div id="stressLevel2" data-stress-level="2" class="stress-level-button"><h3>Working retail on black friday</h3></div>
+                </div>
+                <div class="start-game">
+                    <button id="startButton">Start Game</button>
+                </div>
+                
+            </div>
         </main>
         <div id="sidebar">
             <div id="timerContainer"></div>
-            <div id="scoreContainer"><p id="score"></p></div>
+            <div id="gameTextContainer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640.001 276.924">
+                    <text transform="translate(0 110.337)" style="fill: #4d4d4e; font-family: Roboto-Regular, Roboto; font-size: 152.356px; wght: 400"><tspan x="50%" y="0" class="svg-text">LEVEL 1</tspan></text>
+                    <line y1="151.5" x2="640" y2="151.5" style="fill: none; stroke: #4d4d4e; stroke-miterlimit: 10; stroke-width: 14px;"/>
+                    <text transform="translate(0 254.16)" style="fill: #4d4d4e; font-family: Roboto-Regular, Roboto; font-size: 84px;"><tspan x="50%" y="0" class="svg-text">GET READY</tspan></text>
+                </svg>
+            </div>
+            <div id="scoreContainer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640.001 276.924">
+                    <text transform="translate(0 110.337)" style="fill: #4d4d4e; font-family: Roboto-Regular, Roboto; font-size: 100px; wght: 400"><tspan x="50%" y="0" class="svg-text">SCORE:</tspan></text>
+                    <line y1="151.5" x2="640" y2="151.5" style="fill: none; stroke: #4d4d4e; stroke-miterlimit: 10; stroke-width: 14px;"/>
+                    <text transform="translate(0 254.16)" style="fill: #4d4d4e; font-family: Roboto-Regular, Roboto; font-size: 84px;"><tspan x="50%" y="0" class="svg-text" id="score-digits">0</tspan></text>
+                </svg>
+            </div>   
         </div>      
     </div>
     <div id="preloadPics"></div>

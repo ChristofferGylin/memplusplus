@@ -11,6 +11,7 @@ export const game = {
     background: null,
     score: 0,
     scoreGoal: 6,
+    stressLevel: 1,
     timeOutId: null,
     timeLimit: 60000,
     startTime: null

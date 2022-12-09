@@ -36,8 +36,8 @@ export const clickCard = (e) => {
                 game.pairedCards.push(game.pickedCardElements[0]);
                 game.score += 100;
                 game.numberOfPairs++;
-                document.getElementById('score');
-                score.innerHTML = `Score: ${game.score}`;
+                const score = document.getElementById('score-digits');
+                score.innerHTML = game.score;
                 if (game.numberOfPairs >= game.pairGoal) {
                     game.gameOn = false;
                     console.log('You win!', game);
