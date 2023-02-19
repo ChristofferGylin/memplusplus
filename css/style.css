@@ -6,10 +6,10 @@ html {
 }
 
 body {
-    background-color: bisque;
+    background-image: url('../img/blue-coral.jpg');
     margin: 0;
     padding: 0;
-
+    backdrop-filter: blur(10px);
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -45,6 +45,136 @@ main {
     border-left: 0.1rem solid rgb(34, 33, 33);
     display: none;
     grid-template-rows: 1fr 3fr 1fr;
+
+}
+
+.logo {
+    fill: rgb(255, 5, 5);
+    stroke: red;
+    width: 100%;
+    justify-self: center;
+}
+
+
+#brainSvg {
+    width: 100%;
+    background: red;
+}
+
+.menuInnerContainer {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+}
+
+#brainSvg {
+    fill: white;
+}
+
+#gameMenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    width: 60%;
+    max-width: 800px;
+}
+
+.buttons {
+
+
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0 1.5rem;
+    height: 6rem;
+    border-radius: 0 0.8rem 0 0;
+
+}
+
+ul {
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1.8rem;
+    margin: 0;
+    padding: 0;
+    
+}
+
+li {
+    list-style: none; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+button, .stress-level-button {
+    background:none;
+    border: none;
+    color: #f7f7f7;
+    font-size: 2.5rem;
+    margin: 0;
+    align-self: center;
+    padding: 0;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+.stressMenu {
+    display: none;
+    justify-content: end;
+    position: absolute;
+    background: rgba(0,0,0,0.4);
+    bottom: 6rem;
+    left: 0;
+    border-radius: 0 0.8rem 0 0;
+    width: 100%;
+
+}
+
+.stress-level-button {
+    font-size: 2rem;
+    margin-right: 2rem;
+    margin-top: 1rem;
+    margin: 1rem 2rem 0 2rem
+    
+}
+
+.stress-level-button:hover {
+    text-decoration: underline;
+}
+
+.stress-level-button:hover .checkmark {
+    text-decoration: none;
+}
+
+.checkmark {
+    color: rgb(52, 235, 52);
+    visibility: hidden;
+    margin: 0 0.4rem;
+    
+}
+
+
+.stress-level-chosen .checkmark {
+
+    visibility: visible;
+
+}
+
+
+.hidden {
+
+    display: none;
 
 }
 
@@ -115,21 +245,6 @@ main {
 
 }
 
-.stress-level-button {
-    margin: 3rem;
-}
-
-.stress-level-button h3:hover {
-    text-decoration: underline;
-}
-
-.stress-level-chosen {
-
-    border: 0.1rem solid black;
-    border-radius: 1rem;
-
-}
-
 #timerContainer {
 
     width: 90%;
@@ -196,16 +311,3 @@ main {
     visibility: visible;
 }
 
-button {
-    color: rgb(33, 32, 32);
-    font-size: 2rem;
-    background-color: aliceblue;
-    margin-top: 2rem;
-    padding: 1rem 2rem;
-    border-radius: 1rem;
-}
-
-button:hover {
-    color: aliceblue;
-    background-color: rgb(33, 32, 32);
-}

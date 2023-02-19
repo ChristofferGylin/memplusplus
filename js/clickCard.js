@@ -40,7 +40,6 @@ export const clickCard = (e) => {
                 score.innerHTML = game.score;
                 if (game.numberOfPairs >= game.pairGoal) {
                     game.gameOn = false;
-                    console.log('You win!', game);
                 }
 
                 game.pickedCardElements.length = 0;

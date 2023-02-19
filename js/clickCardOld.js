@@ -23,7 +23,6 @@ export const clickCard = (e) => {
 
         game.pickedCardElements.forEach(element => {
             if (e.target === element) {
-                console.log('return')
                 return
             }
         });

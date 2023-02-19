@@ -8,7 +8,6 @@ export const drawBoard = (game) => {
 
         for (let i = 0; i < game.pics.length; i++) {
             cardSelection.push(i, i);
-            console.log(i);
         }
 
         for (let i = 0; i < game.pics.length * 2; i++) {

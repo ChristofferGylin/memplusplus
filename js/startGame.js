@@ -10,7 +10,7 @@ export const startGame = (game) => {
 
         drawTimer();
 
-        document.getElementById('blackoutcover').style.opacity = '0%';
+        document.getElementById('blackoutcover').style.opacity = '0';
         setTimeout(() => {
             document.getElementById('blackoutcover').style.display = 'none';
         }, 1000);
@@ -34,17 +34,24 @@ export const startGame = (game) => {
     }
 
     document.getElementById('blackoutcover').style.display = 'block';
-    document.getElementById('blackoutcover').style.opacity = '100%';
 
     setTimeout(() => {
-        document.getElementById('container').style.gridTemplateColumns = "4fr 1fr";
-        document.getElementById('sidebar').style.display = 'grid';
-        document.getElementById('gameBoard').innerHTML = '';
-        loadLevel(levels[game.level]);
-        checkIfLoaded();
+        document.getElementById('blackoutcover').style.opacity = '1';
+        setTimeout(() => {
+            document.getElementById('container').style.gridTemplateColumns = "4fr 1fr";
+            document.getElementById('sidebar').style.display = 'grid';
+            document.getElementById('gameBoard').innerHTML = '';
+            document.querySelector('body').style.backdropFilter = 'none';
+            document.getElementById('gameMenu').style.display = 'none';
+            loadLevel(levels[game.level]);
+            checkIfLoaded();
 
 
-    }, 1000);
+        }, 1000);
+    }, 1);
+
+
+
 
 
 
