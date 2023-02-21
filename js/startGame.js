@@ -1,3 +1,4 @@
+import animationParameters from "./animationParameters.js";
 import { levels } from "./levels.js";
 import { loadLevel } from "./loadLevel.js";
 import { drawTimer } from './timer/drawTimer.js';
@@ -13,7 +14,7 @@ export const startGame = (game) => {
         document.getElementById('blackoutcover').style.opacity = '0';
         setTimeout(() => {
             document.getElementById('blackoutcover').style.display = 'none';
-        }, 1000);
+        }, 2000);
 
 
         startTimer();
@@ -38,6 +39,11 @@ export const startGame = (game) => {
     setTimeout(() => {
         document.getElementById('blackoutcover').style.opacity = '1';
         setTimeout(() => {
+
+            const animationContainer = document.getElementById('animationContainer')
+            animationContainer.innerHTML = '';
+            animationContainer.style.display = 'none';
+            animationParameters.on = false;
             document.getElementById('container').style.gridTemplateColumns = "4fr 1fr";
             document.getElementById('sidebar').style.display = 'grid';
             document.getElementById('gameBoard').innerHTML = '';
@@ -46,8 +52,7 @@ export const startGame = (game) => {
             loadLevel(levels[game.level]);
             checkIfLoaded();
 
-
-        }, 1000);
+        }, 2000);
     }, 1);
 
 

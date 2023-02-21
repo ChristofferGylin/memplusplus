@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    background-image: url('../img/blue-coral.jpg');
+    background-image: url('../img/blue-coral-crop.jpg');
     margin: 0;
     padding: 0;
     backdrop-filter: blur(10px);
@@ -29,9 +29,9 @@ main {
     height: 100vh;
     position: fixed;
     background-color: black;
-    opacity: 0;
-    display: none;
-    transition: all 1s;
+    opacity: 1;
+    display: block;
+    transition: all 2s;
     z-index: 99;
 }
 
@@ -81,6 +81,7 @@ main {
     gap: 5%;
     width: 60%;
     max-width: 800px;
+    z-index: 1;
 }
 
 .buttons {
@@ -310,5 +311,83 @@ button:hover {
 
 .card-show img {
     visibility: visible;
+}
+
+#animationContainer {
+
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+
+.animationSprite {
+    height: 100%;
+} 
+
+.animationSpriteContainer {
+
+    height: 1px;
+    position: absolute;
+    
+
+}
+
+.spin0 {
+    animation: aniSpin 5s linear infinite;
+    
+}
+
+.spin1 {
+    animation: aniSpin 8s linear infinite;
+    
+}
+
+.spin2 {
+    animation: aniSpin 12s linear infinite;
+    
+}
+
+.spin3 {
+    animation: aniSpin 18s linear infinite;
+    
+}
+
+.spin4 {
+    animation: aniSpin 26s linear infinite;
+    
+}
+
+.spin5 {
+    animation: aniSpin 36s linear infinite;
+    
+}
+
+.spin6 {
+    animation: aniSpin 48s linear infinite;
+    
+}
+
+.spin7 {
+    animation: aniSpin 64s linear infinite;
+    
+}
+
+.spin8 {
+    animation: aniSpin 80s linear infinite;
+    
+}
+
+@keyframes aniSpin {
+    0% {transform: rotate(0deg)}
+   
+    50% {transform: rotate(180deg)}
+    
+    100% {transform: rotate(360deg)}
+
 }
 
