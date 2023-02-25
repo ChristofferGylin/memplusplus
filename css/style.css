@@ -220,8 +220,8 @@ button:hover {
 
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    width: 26.67vw;
-    height: 27.82vw;
+    width: 70vw;
+    height: 73.01vw;
 
 
 }
@@ -230,8 +230,8 @@ button:hover {
 
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    width: 33.33vw;
-    height: 37.1vw;
+    width: 70vw;
+    height: 77.91vw;
 
 
 }
@@ -240,9 +240,57 @@ button:hover {
 
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    width: 40vw;
-    height: 46.36vw;
+    width: 70vw;
+    height: 81.13vw;
 
+
+}
+@media screen and (min-width: 1024px) {
+
+    .game-board-level1 {
+        width: 60vw;
+        height: 62.58vw;
+    }
+    .game-board-level2 {
+        width: 60vw;
+        height: 66.78vw;
+    }
+    .game-board-level3 {
+        width: 60vw;
+        height: 69.54vw;
+    }
+
+}
+@media screen and (min-width: 1440px) {
+
+    .game-board-level1 {
+        width: 50vw;
+        height: 52.15vw;
+    }
+    .game-board-level2 {
+        width: 50vw;
+        height: 55.65vw;
+    }
+    .game-board-level3 {
+        width: 50vw;
+        height: 57.95vw;
+    }
+
+}
+@media screen and (min-width: 1900px) {
+
+    .game-board-level1 {
+        width: 40vw;
+        height: 41.72vw;
+    }
+    .game-board-level2 {
+        width: 40vw;
+        height: 44.52vw;
+    }
+    .game-board-level3 {
+        width: 40vw;
+        height: 46.36vw;
+    }
 
 }
 

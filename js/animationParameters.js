@@ -14,6 +14,4 @@ window.addEventListener('resize', () => {
     animationParameters.maxHeight = window.innerHeight;
     animationParameters.minHeight = window.innerHeight / 20;
 
-    console.log(animationParameters.maxHeight);
-
 })
