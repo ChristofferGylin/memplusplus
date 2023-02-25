@@ -14,7 +14,7 @@ export const startGame = (game) => {
         document.getElementById('blackoutcover').style.opacity = '0';
         setTimeout(() => {
             document.getElementById('blackoutcover').style.display = 'none';
-        }, 2000);
+        }, 1300);
 
 
         startTimer();
@@ -51,7 +51,7 @@ export const startGame = (game) => {
             loadLevel(levels[game.level]);
             checkIfLoaded();
 
-        }, 2000);
+        }, 1300);
     }, 1);
 
 

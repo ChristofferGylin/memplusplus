@@ -30,7 +30,7 @@ main {
     background-color: black;
     opacity: 1;
     display: block;
-    transition: all 2s;
+    transition: all 1.5s;
     z-index: 99;
 }
 

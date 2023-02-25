@@ -1,6 +1,6 @@
 export const game = {
     gameOn: false,
-    level: 2,
+    level: 0,
     state: 'waiting',
     numberOfPairs: 0,
     pairGoal: 0,
