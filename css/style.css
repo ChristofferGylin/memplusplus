@@ -9,7 +9,6 @@ body {
     background-image: url('../img/blue-coral-crop.jpg');
     margin: 0;
     padding: 0;
-    backdrop-filter: blur(10px);
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;

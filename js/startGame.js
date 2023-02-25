@@ -47,7 +47,6 @@ export const startGame = (game) => {
             document.getElementById('container').style.gridTemplateColumns = "4fr 1fr";
             document.getElementById('sidebar').style.display = 'grid';
             document.getElementById('gameBoard').innerHTML = '';
-            document.querySelector('body').style.backdropFilter = 'none';
             document.getElementById('gameMenu').style.display = 'none';
             loadLevel(levels[game.level]);
             checkIfLoaded();
